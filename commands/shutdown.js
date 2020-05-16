@@ -6,6 +6,7 @@ module.exports = {
     args: false,
     execute(message, args, client)
     {
-        message.reply('Shutting down...').then(msg => client.destroy());
+        if (message.author.id === '657341410332377097') return message.reply('Shutting down...').then(msg => client.destroy());
+        message.reply('you dont have permission to execute this command');
     }
 }
